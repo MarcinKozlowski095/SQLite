@@ -79,6 +79,7 @@ left_join = cur.execute('''
 ''').fetchall()
 for row in left_join:
     print(row)
+    
 # Left join, group by id and count average rating for each instructor
 avg_rating = cur.execute('''
     SELECT esmartdata_instructor.id,
@@ -91,6 +92,7 @@ avg_rating = cur.execute('''
 ''').fetchall()
 for row in avg_rating:
     print(row)
+    
 #Left join and filter the courses where the title contains 'Ćwicze'
 exercises = cur.execute('''
     SELECT first_name,
@@ -103,6 +105,7 @@ exercises = cur.execute('''
 ''').fetchall()
 for row in exercises:
     print(row)
+    
 #Left join and filter the courses where the title contains 'Python' and 'eng'
 python_and_eng = cur.execute('''
     SELECT first_name,
