@@ -1,19 +1,21 @@
-# Database Management with SQLite
+# eSmartData Database
 
-This script demonstrates basic database management using SQLite in Python. It creates a database named `app.db` and performs operations such as table creation, data insertion, and data update.
+This project contains a SQLite database called `esmartdata.sqlite3`, which stores information about instructors and courses offered by eSmartData.
 
-## Code Description
+## Database Schema
 
-1. **Database Connection**: Establishes a connection to the SQLite database named `app.db`.
+The database schema consists of two tables:
 
-2. **Table Creation**: Creates a table named `category` if it doesn't already exist. The table has two columns: `category_id` and `category_name`.
+1. `esmartdata_instructor`: Stores information about instructors, including their first name, last name, and description.
+2. `esmartdata_course`: Stores information about courses, including title, subtitle, description, category, subcategory, language, length, rating, referral link, and the ID of the instructor who teaches the course.
 
-3. **Data Insertion**: Inserts initial data ('technology', 'e-commerce', 'gaming') into the `category` table.
+## Queries
 
-4. **Data Update**: Updates the name of the category with `category_id` equal to 2 to 'online shop'.
+Here are some sample queries you can run on the database:
 
-5. **Commit Changes**: Commits the changes made to the database.
-
-6. **Fetch and Print**: Fetches all categories from the `category` table and prints them.
-
-7. **Database Connection Closure**: Closes the connection to the database.
+- Retrieve the titles of all courses.
+- Get a sorted list of subcategories.
+- Count the number of courses for each instructor.
+- Calculate the average rating for each instructor.
+- Filter courses containing the word "Ćwicze".
+- Filter courses containing the word "Python" and with English language.
